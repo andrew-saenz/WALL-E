@@ -23,17 +23,17 @@
   tasks:
   - name: Clone template
     vmware_guest:
-      hostname: 192.168.102.10
+      hostname: x.x.x.x
       username: '{{ vcenter_username }}'
       password: '{{ vcenter_password }}'
       validate_certs: false
       name: '{{ vm_name }}'
-      template: 'WIN2016'
-      datacenter: SD
+      template: 'Template-Name'
+      datacenter: DC
       folder: VMs
       esxi_hostname: '{{ esxi_hostname }}'
       customization:
-        orgname: CHG
+        orgname: orgname
       customization_spec: '{{ customization_spec }}'
       state: poweredon
       wait_for_ip_address: true
@@ -67,10 +67,10 @@
       reboot: yes
       reboot_timeout: 300
 
-  - name: install 7-zip
+  - name: install notepad++
     win_package:
-      path: \\chg_cifs02\ISDATASHARE\Images\7ZIP\7z1602-x64.exe
-      product_id: 7-Zip
+      path: \\path\to\notepadd++\.exe
+      product_id: Notepadd++
       arguments: /S
       state: present
       user_name: '{{ domain_admin }}'
