@@ -3,7 +3,7 @@
   <info>
     <_type>vim.CustomizationSpecInfo</_type>
     <changeVersion>1541540986</changeVersion>
-    <description>This is used to enable the WinRM service via GPO and other requirements for WinRM.</description>
+    <description>This is used to place VM in Managed GPO to enable WinRM service and other requirements for WinRM.</description>
     <lastUpdateTime>2018-11-06T21:49:46Z</lastUpdateTime>
     <name>winrm</name>
     <type>Windows</type>
