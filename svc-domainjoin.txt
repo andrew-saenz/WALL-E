@@ -1,0 +1,1 @@
+Open Active Directory > Delegate Control at OU > Create a custom task to delegate > Only the following objects: Computer Objects > Check " Create selected objects in this folder > Full Control
