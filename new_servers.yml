@@ -1,0 +1,78 @@
+---
+- name: Create a VM from a template
+  hosts: localhost
+  connection: local
+
+  vars_prompt:
+    - name: "vm_name"
+      prompt: "vm_name"
+      private: no
+    - name: "vcenter_password"
+      prompt: "vcenter_password"
+      private: yes
+    - name: "vcenter_username"
+      prompt: "vcenter_username"
+      private: no
+    - name: "esxi_hostname"
+      prompt: "esxi_hostname"
+      private: no
+    - name: "customization_spec"
+      prompt: "customization_spec"
+      private: no
+
+  tasks:
+  - name: Clone template
+    vmware_guest:
+      hostname: 192.168.102.10
+      username: '{{ vcenter_username }}'
+      password: '{{ vcenter_password }}'
+      validate_certs: false
+      name: '{{ vm_name }}'
+      template: 'WIN2016'
+      datacenter: SD
+      folder: VMs
+      esxi_hostname: '{{ esxi_hostname }}'
+      customization:
+        orgname: CHG
+      customization_spec: '{{ customization_spec }}'
+      state: poweredon
+      wait_for_ip_address: true
+
+  - name: add host to inventory
+    add_host:
+      name: '{{ vm_name }}'
+      groups: 'new_servers'
+
+  - name: pause for windows vm to be online
+    pause:
+      minutes: 4
+
+- name: change host to new vm
+  hosts: new_servers
+  gather_facts: false
+
+  vars_prompt:
+  - name: "domain_admin"
+    prompt: "domain_admin"
+    private: no
+  - name: "domain_admin_password"
+    prompt: "domain_admin_password"
+    private: yes
+
+  tasks:
+  - name: check for windows updates
+    win_updates:
+      category_names:
+      - SecurityUpdates
+      reboot: yes
+      reboot_timeout: 300
+
+  - name: install 7-zip
+    win_package:
+      path: \\chg_cifs02\ISDATASHARE\Images\7ZIP\7z1602-x64.exe
+      product_id: 7-Zip
+      arguments: /S
+      state: present
+      user_name: '{{ domain_admin }}'
+      user_password: '{{ domain_admin_password }}'
+
