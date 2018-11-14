@@ -3,9 +3,9 @@ Auto Create Windows 2016 Server VMware VM
 
 This project is used to autodeploy a virtual machine template using Ansible with VMware customization specification. These scripts were tested with Windows Server 2016. When running all of these scripts together you should get the following:
 
-  1. Auto Deploy VM from template.
-  2. Join VM to domain and place in GPO Managed OU.
-  3. GPOs should enable WinRM service and open neccessary ports for Ansible host communication.
+  - Auto Deploy VM from template.
+  - Join VM to domain and place in GPO Managed OU.
+  - GPOs should enable WinRM service and open neccessary ports for Ansible host communication.
 
 Optional features: Windows Updates and application installation from share drive.
 
