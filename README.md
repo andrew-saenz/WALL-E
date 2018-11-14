@@ -8,6 +8,11 @@ This project is used to autodeploy a virtual machine template using Ansible with
   - GPOs should enable WinRM service and open neccessary ports for Ansible host communication.
   - Install Windows Updates
   - Install application from share drive.
+  
+Install Ansible 2.7 on CentOS7
+  - Install Centos7
+  - install Python 2.7 or higher
+  - Install pyvmomi
 
 Steps for Setting up Virtual Machine:
 
