@@ -1,5 +1,5 @@
-$username = "username"
-$password = ConvertTo-SecureString -String "password" -AsPlainText -Force
+$username = "local_admin"
+$password = ConvertTo-SecureString -String "local_admin_password" -AsPlainText -Force
 $credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $username, $password
 
 # this is the issuer thumbprint which in the case of a self generated cert
