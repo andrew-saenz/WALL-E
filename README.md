@@ -6,8 +6,8 @@ This project is used to autodeploy a virtual machine template using Ansible with
   - Auto Deploy VM from template.
   - Join VM to domain and place in GPO Managed OU.
   - GPOs should enable WinRM service and open neccessary ports for Ansible host communication.
-
-Optional features: Windows Updates and application installation from share drive.
+  - Install Windows Updates
+  - Install application from share drive.
 
 Steps for Setup:
 
