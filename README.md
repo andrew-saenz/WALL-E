@@ -11,7 +11,7 @@ This project is used to autodeploy a virtual machine template using Ansible with
   
 Install Ansible 2.7 on CentOS7 Virtual machine
   - Install Centos7
-  - install Python 2.7 or higher
+  - Install Python 2.7 or higher
   - Install Pyvmomi
   - install Ansible 2.7
 
