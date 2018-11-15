@@ -32,8 +32,8 @@
       datacenter: DC
       folder: VMs
       esxi_hostname: '{{ esxi_hostname }}'
-      customization: # Currently a glitch in ansible where customization and an argurment must be declared in order to use customization spec  
-        orgname: orgname
+      customization: # Bug in ansible where customization and an argurment must be declared in order to use customization spec  
+        orgname: orgname # Do not delete see comment above
       customization_spec: '{{ customization_spec }}'
       state: poweredon
       wait_for_ip_address: true
