@@ -14,7 +14,7 @@ Setup the following under GPO management to allow the new VM to automatically be
   - Service name = WinRM
   - Service action = Start service
   
-  Leave everything else set to default
+  Leave everything else set to default.
   
   
   
