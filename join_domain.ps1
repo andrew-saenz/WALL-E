@@ -6,4 +6,4 @@ $user = "domain\account"
 $password = ConvertTo-SecureString -String "password" -AsPlainText -Force 
 $cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $user,$password
 
-Add-Computer -Domainname "chg.com" -OUPath "OU=WinRM Enabled,OU=VM-Dedicated,DC=chg,DC=com" -Credential $cred  -Restart -Force
+Add-Computer -Domainname "chg.com" -OUPath "OU=WinRM Enabled,OU=Servers,DC=chg,DC=com" -Credential $cred  -Restart -Force
