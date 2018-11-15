@@ -1,4 +1,4 @@
-Setup the following under GPO management to allow the new VM to automatically be able to communicate to the Ansible host and receive further commands:
+Setup the following GPO policy to allow new VMs to automatically be able to communicate to the Ansible host and receive further commands:
 
   GPO for WinRM Port:
   
