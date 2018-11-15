@@ -37,4 +37,4 @@ Steps for Setting up Virtual Machine:
    - Run map-acct-to-cert.ps1 to map local admin account to certificate. Change powershell script to reflect the local admin account and      admin password
    
 6. In vCenter, convert virtual machine to template.  
-   #---DO NOT sysprep the image---
+   #---DO NOT sysprep the image---#
