@@ -9,13 +9,13 @@ This project is used to autodeploy a virtual machine template using Ansible with
   - Install Windows Updates
   - Install application from share drive.
   
-Install Ansible 2.7 on CentOS7
+Install Ansible 2.7 on CentOS7 Virtual machine
   - Install Centos7
   - install Python 2.7 or higher
   - Install Pyvmomi
   - install Ansible 2.7
 
-Steps for Setting up Virtual Machine:
+Setup Windows Server 2016 Virtual Machine Template:
 
 1. Create Windows Virtual Machine
 
