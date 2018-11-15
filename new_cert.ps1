@@ -1,6 +1,6 @@
 # set the name of the local user that will have the key mapped
 $username = "local_admin"
-$output_path = "C:\Scripts\certificate"
+$output_path = "C:\output\to\certificate\folder"
 
 # instead of generating a file, the cert will be added to the personal
 # LocalComputer folder in the certificate store
