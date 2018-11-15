@@ -1,6 +1,6 @@
 Steps to create a domain account to only join computers to domain instead of using a domain administrator:
 
-  1. Open Active Directory and create a user account to join computers to domain (i.e. svc-joindomain)
+  1. Open Active Directory and create a user account to join computers to domain (i.e. svc-joindomain).
   2. Right-click OU that computers will be placed in for WinRM GPO and select "Delegate Control"
   3. Add the service account in the Users and Groups section and click "Next".
   4. Select "Create a custom task to delegate" and click "Next".
