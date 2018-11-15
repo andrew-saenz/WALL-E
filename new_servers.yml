@@ -32,7 +32,7 @@
       datacenter: DC
       folder: VMs
       esxi_hostname: '{{ esxi_hostname }}'
-      customization:
+      customization: # Currently a glitch in ansible where customization and an argurment must be declared in order to use customization spec  
         orgname: orgname
       customization_spec: '{{ customization_spec }}'
       state: poweredon
@@ -69,8 +69,8 @@
 
   - name: install notepad++
     win_package:
-      path: \\path\to\notepadd++\.exe
-      product_id: Notepadd++
+      path: \\path\to\notepad++\.exe
+      product_id: Notepad++
       arguments: /S
       state: present
       user_name: '{{ domain_admin }}'
