@@ -46,3 +46,5 @@ NOTE: For security, lock this folder down to local admins only and hide folder.
 8. Create a Service account to only join computers to domain. Follow "domain-join-only" documentation.
 
 9. Create a customization spec and add the options shown in winrm_custom_spec.md
+
+Optional: Create a Windows 2016 core server and setup dhcp role to pass I.P> address to new VMs created through project.
