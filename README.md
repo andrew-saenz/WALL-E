@@ -22,6 +22,7 @@ Setup Windows Server 2016 Virtual Machine Template:
 2. Place the following scripts in a folder (i.e. C:\Scripts):
    - join_domain.ps1
    - run_join_domain.bat
+   
 NOTE: For security, lock this folder down to local admins only and hide folder.
 
 3. Install Powershell 3.0+ and .Net 4.0
