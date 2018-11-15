@@ -21,7 +21,7 @@ Setup Windows Server 2016 Virtual Machine Template:
 1. Create Windows Virtual Machine
 
 2. Place the following scripts in a folder (e.g. C:\Scripts):
-   - join_domain.ps1
+   - join_domain.ps1 (Tweak script to point to your OU you want the VMs to land in)
    - run_join_domain.bat
    
 NOTE: For security, lock this folder down to local admins only and hide folder.
