@@ -39,3 +39,7 @@ Setup Windows Server 2016 Virtual Machine Template:
    
 6. In vCenter, convert virtual machine to template.  
    #---DO NOT sysprep the image---#
+   
+7. Setup GPOs following the "GPO config" document.
+
+8. Create a Service account to only join computers to domain. Follow "domain-join-only" documentation.
