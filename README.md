@@ -44,3 +44,5 @@ NOTE: For security, lock this folder down to local admins only and hide folder.
 7. Setup GPOs following the "GPO config" document.
 
 8. Create a Service account to only join computers to domain. Follow "domain-join-only" documentation.
+
+9. Create a customization spec and add the options shown in winrm_custom_spec.md
