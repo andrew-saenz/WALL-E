@@ -9,14 +9,14 @@ This project is used to autodeploy a virtual machine template using Ansible with
   - Install Windows Updates
   - Install application from share drive.
   
-Install Ansible 2.7 on CentOS7 Virtual machine
+### Install Ansible 2.7 on CentOS7 Virtual machine
   - Install Centos7
   - Install Python 2.7 or higher
   - Install pip and upgrade
   - Install Pyvmomi
   - install Ansible 2.7
 
-Setup Windows Server 2016 Virtual Machine Template:
+### Setup Windows Server 2016 Virtual Machine Template:
 
 1. Create Windows Virtual Machine
 
@@ -26,7 +26,7 @@ Setup Windows Server 2016 Virtual Machine Template:
    - join_domain.ps1 (Tweak script to point to your OU you want the VMs to land in)
    - run_join_domain.bat (Change path to point to join_domain.ps1 in script)
    
-NOTE: For security, lock this folder down to local admins only and hide folder.
+### NOTE: For security, lock this folder down to local admins only and hide folder.
 
 4. Install Powershell 3.0+ and .Net 4.0
 
@@ -50,4 +50,4 @@ NOTE: For security, lock this folder down to local admins only and hide folder.
 
 10. Create a customization spec and add the options shown in winrm_custom_spec.md
 
-Optional: Create a Windows 2016 core server and setup dhcp role to pass I.P. address to new VMs created through project.
+### Optional: Create a Windows 2016 core server and setup dhcp role to pass I.P. address to new VMs created through project.
