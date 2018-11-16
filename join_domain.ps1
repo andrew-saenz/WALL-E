@@ -2,7 +2,7 @@
 
 # Your script here
 
-$user = "domain\account"
+$user = "domain\svc-joindomain"
 $password = ConvertTo-SecureString -String "password" -AsPlainText -Force 
 $cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $user,$password
 
